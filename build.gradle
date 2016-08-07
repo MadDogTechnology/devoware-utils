@@ -1,0 +1,45 @@
+allprojects {
+    group = 'org.devoware'
+    version = 1.0
+
+    repositories {
+        mavenCentral()
+    }
+
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    dependencies {
+    testCompile 'junit:junit:4.12', 
+                'org.mockito:mockito-core:1.10.19',
+                'org.hamcrest:hamcrest-all:1.3'     
+    }
+
+    compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            repository(url: "file:///Users/cdevoto/GitHub/maven-repository/")
+        }
+    }
+}
+
+task clean {
+    dependsOn subprojects.clean
+}
+
+task build {
+    dependsOn subprojects.build
+}
+
+task uploadArchives {
+    dependsOn subprojects.uploadArchives
+}

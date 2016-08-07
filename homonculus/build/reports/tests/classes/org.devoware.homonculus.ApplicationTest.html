@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class org.devoware.homonculus.ApplicationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class org.devoware.homonculus.ApplicationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.devoware.homonculus.html">org.devoware.homonculus</a> &gt; ApplicationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.521s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test_application_lifecycle</td>
+<td>0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test_get_configuration_class</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test_initialize_called</td>
+<td>0.498s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:37:46.739 [Test worker] INFO  org.devoware.homonculus.Application - Loading configuration file mock-application.yml...
+16:37:46.907 [Test worker] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+16:37:46.909 [Test worker] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+16:37:46.947 [Test worker] DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+16:37:46.955 [Test worker] DEBUG o.h.v.i.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+16:37:46.957 [Test worker] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+16:37:46.958 [Test worker] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+16:37:46.958 [Test worker] DEBUG o.h.v.i.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+16:37:46.995 [Test worker] INFO  o.d.c.YamlConfigurationFactory - Loading configuration from mock-application.yml...
+16:37:47.101 [Test worker] INFO  o.d.c.YamlConfigurationFactory - Configuration successfully loaded from mock-application.yml.
+16:37:47.101 [Test worker] INFO  org.devoware.homonculus.Application - Configuration file loaded successfully.
+org.devoware.homonculus.ApplicationTest$MockApplication@5d41f3e2
+16:37:47.107 [Test worker] INFO  org.devoware.homonculus.Application - Loading configuration file mock-application.yml...
+16:37:47.108 [Test worker] DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+16:37:47.109 [Test worker] DEBUG o.h.v.i.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+16:37:47.109 [Test worker] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+16:37:47.109 [Test worker] DEBUG o.h.v.i.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+16:37:47.110 [Test worker] DEBUG o.h.v.i.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+16:37:47.111 [Test worker] INFO  o.d.c.YamlConfigurationFactory - Loading configuration from mock-application.yml...
+16:37:47.114 [Test worker] INFO  o.d.c.YamlConfigurationFactory - Configuration successfully loaded from mock-application.yml.
+16:37:47.115 [Test worker] INFO  org.devoware.homonculus.Application - Configuration file loaded successfully.
+16:37:47.121 [Test worker] INFO  o.d.h.lifecycle.LifecycleManager - The termination sensor is listening on port 51335.
+16:37:47.122 [Test worker] INFO  o.d.h.lifecycle.LifecycleManager - Starting org.devoware.homonculus.ApplicationTest$MockApplication...
+16:37:47.122 [Test worker] INFO  o.d.h.lifecycle.LifecycleManager - org.devoware.homonculus.ApplicationTest$MockApplication started
+16:37:47.122 [Test worker] INFO  o.d.h.lifecycle.LifecycleManager - Starting org.devoware.homonculus.lifecycle.LifecycleManager$KeepAliveDaemon...
+16:37:47.122 [Test worker] INFO  o.d.h.lifecycle.LifecycleManager - org.devoware.homonculus.lifecycle.LifecycleManager$KeepAliveDaemon started
+16:37:47.122 [Test worker] INFO  org.devoware.homonculus.Application - Attempting to stop the mock-application application...
+16:37:47.123 [Test worker] INFO  o.d.homonculus.shutdown.Terminator - Sending termination signal to stop the application...
+16:37:47.128 [Test worker] INFO  o.d.homonculus.shutdown.Terminator - Termination signal successfully sent.
+16:37:47.129 [pool-1-thread-1] WARN  o.d.h.lifecycle.LifecycleManager - The termination sensor received a valid termination sequence.
+16:37:47.129 [pool-1-thread-1] INFO  o.d.h.lifecycle.LifecycleManager - Stopping org.devoware.homonculus.ApplicationTest$MockApplication...
+16:37:47.129 [pool-1-thread-1] INFO  o.d.h.lifecycle.LifecycleManager - org.devoware.homonculus.ApplicationTest$MockApplication stopped
+16:37:47.129 [pool-1-thread-1] INFO  o.d.h.lifecycle.LifecycleManager - Stopping org.devoware.homonculus.lifecycle.LifecycleManager$KeepAliveDaemon...
+16:37:47.130 [pool-1-thread-1] INFO  o.d.h.lifecycle.LifecycleManager - org.devoware.homonculus.lifecycle.LifecycleManager$KeepAliveDaemon stopped
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.11</a> at Aug 7, 2016 4:37:47 PM</p>
+</div>
+</div>
+</body>
+</html>

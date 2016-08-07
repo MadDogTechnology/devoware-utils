@@ -1,0 +1,37 @@
+package org.devoware.bootstrap.test;
+
+public class MockApplication {
+	private boolean initCalled;
+	private boolean startCalled;
+	private boolean stopCalled;
+	private String [] args;
+	
+	public void appInit (String [] args) {
+		initCalled = true;
+		this.args = args;
+	}
+	
+	public void appStart () {
+		startCalled = true;
+	}
+	
+	public void appStop () {
+		stopCalled = true;
+	}
+
+	public boolean isInitCalled() {
+		return initCalled;
+	}
+
+	public boolean isStartCalled() {
+		return startCalled;
+	}
+
+	public boolean isStopCalled() {
+		return stopCalled;
+	}
+
+    public String [] getArgs() {
+        return args;
+    }
+}

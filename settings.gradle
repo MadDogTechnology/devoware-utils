@@ -1,0 +1,3 @@
+include 'bootstrap', 'yaml-configuration', 'homonculus'
+
+rootProject.name = 'mis-scheduler'
