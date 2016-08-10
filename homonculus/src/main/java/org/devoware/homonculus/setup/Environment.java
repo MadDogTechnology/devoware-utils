@@ -74,11 +74,11 @@ public class Environment {
     return validator;
   }
 
-  public MetricRegistry getMetrics() {
+  public MetricRegistry metrics() {
     return metrics;
   }
 
-  public HealthCheckRegistry getHealthCheckRegistry() {
+  public HealthCheckRegistry healthChecks() {
     return healthCheckRegistry;
   }
 }
