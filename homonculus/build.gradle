@@ -12,5 +12,8 @@ dependencies {
                 'javax.validation:validation-api:1.1.0.Final',
                 'org.hibernate:hibernate-validator:5.2.4.Final',
                 'org.glassfish:javax.el:3.0.0',
+                'io.dropwizard.metrics:metrics-core:3.1.0',
+                'io.dropwizard.metrics:metrics-healthchecks:3.1.0',
+                'io.dropwizard.metrics:metrics-jvm:3.1.0',
                 project(':yaml-configuration')
 }

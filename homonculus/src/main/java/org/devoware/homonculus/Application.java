@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.net.ConnectException;
 
+import javax.validation.Validator;
+
 import org.devoware.configuration.ClasspathConfigurationSourceProvider;
 import org.devoware.configuration.ConfigurationException;
 import org.devoware.configuration.ConfigurationFactory;
@@ -13,23 +15,30 @@ import org.devoware.configuration.ConfigurationSourceProvider;
 import org.devoware.configuration.YamlConfigurationFactory;
 import org.devoware.configuration.validation.Validators;
 import org.devoware.homonculus.lifecycle.LifecycleManager;
-import org.devoware.homonculus.lifecycle.ManagedAdapter;
+import org.devoware.homonculus.lifecycle.Managed;
 import org.devoware.homonculus.setup.Environment;
 import org.devoware.homonculus.shutdown.Terminator;
 import org.devoware.homonculus.util.Generics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.health.HealthCheckRegistry;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public abstract class Application<T> extends ManagedAdapter {
+public abstract class Application<T> implements Managed {
 
   private static final Logger appLog = LoggerFactory.getLogger(Application.class);
 
   private final LifecycleManager lifecycleManager;
   
   public Application () {
-    this.lifecycleManager = new LifecycleManager(getTerminationPort(), new Environment());
+    ObjectMapper objectMapper = new ObjectMapper();
+    Validator validator = Validators.newValidator();
+    MetricRegistry metrics = new MetricRegistry();
+    HealthCheckRegistry healthCheckRegistry = new HealthCheckRegistry();
+    Environment environment = new Environment(objectMapper, validator, metrics, healthCheckRegistry);
+    this.lifecycleManager = new LifecycleManager(getTerminationPort(), environment);
   }
   
   public Application (LifecycleManager lifecycleManager) {

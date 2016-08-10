@@ -174,7 +174,7 @@ public class LifecycleManager {
     }
   }
 
-  private class KeepAliveDaemon extends ManagedAdapter implements Runnable {
+  private class KeepAliveDaemon implements Managed, Runnable {
     private volatile boolean terminated;
     private volatile Thread contextThread;
 
