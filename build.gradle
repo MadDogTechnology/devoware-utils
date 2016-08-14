@@ -25,6 +25,15 @@ subprojects {
         targetCompatibility = 1.8
     }
 
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    artifacts {
+        archives sourcesJar
+    }    
+
     uploadArchives {
         repositories.mavenDeployer {
             repository(url: "file:///Users/cdevoto/GitHub/maven-repository/")
