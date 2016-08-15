@@ -1,5 +1,7 @@
 package org.devoware.homonculus.setup;
 
+import static java.util.Objects.requireNonNull;
+
 import java.lang.management.ManagementFactory;
 import java.util.Comparator;
 import java.util.List;
@@ -38,10 +40,10 @@ public class Environment {
   private final HealthCheckRegistry healthCheckRegistry;
 
   public Environment(ObjectMapper objectMapper, Validator validator, MetricRegistry metrics, HealthCheckRegistry healthCheckRegistry) {
-    this.objectMapper = objectMapper;
-    this.validator = validator;
-    this.metrics = metrics;
-    this.healthCheckRegistry = healthCheckRegistry;
+    this.objectMapper = requireNonNull(objectMapper);
+    this.validator = requireNonNull(validator);
+    this.metrics = requireNonNull(metrics);
+    this.healthCheckRegistry =   requireNonNull(healthCheckRegistry);
     initialize();
   }
 
