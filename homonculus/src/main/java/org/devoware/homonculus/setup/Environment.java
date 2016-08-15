@@ -6,6 +6,7 @@ import java.lang.management.ManagementFactory;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.concurrent.ThreadFactory;
 
 import javax.validation.Validator;
 
@@ -82,5 +83,25 @@ public class Environment {
 
   public HealthCheckRegistry healthChecks() {
     return healthCheckRegistry;
+  }
+  
+  public ExecutorServiceBuilder executorService(String nameFormat) {
+    return new ExecutorServiceBuilder(this, nameFormat);
+  }
+
+  public ExecutorServiceBuilder executorService(String nameFormat, ThreadFactory factory) {
+    return new ExecutorServiceBuilder(this, nameFormat, factory);
+  }
+
+  public ScheduledExecutorServiceBuilder scheduledExecutorService(String nameFormat) {
+    return scheduledExecutorService(nameFormat, false);
+  }
+
+  public ScheduledExecutorServiceBuilder scheduledExecutorService(String nameFormat, ThreadFactory factory) {
+    return new ScheduledExecutorServiceBuilder(this, nameFormat, factory);
+  }
+
+  public ScheduledExecutorServiceBuilder scheduledExecutorService(String nameFormat, boolean useDaemonThreads) {
+    return new ScheduledExecutorServiceBuilder(this, nameFormat, useDaemonThreads);
   }
 }
