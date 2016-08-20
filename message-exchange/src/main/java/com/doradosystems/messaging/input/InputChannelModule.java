@@ -8,7 +8,6 @@ import javax.inject.Singleton;
 
 import org.devoware.homonculus.setup.Environment;
 
-import com.doradosystem.messaging.MessageExchangeQualifiers;
 import com.google.common.eventbus.EventBus;
 
 import dagger.Module;

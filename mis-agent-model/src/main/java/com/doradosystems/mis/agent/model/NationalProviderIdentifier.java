@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 @JsonDeserialize(builder = NationalProviderIdentifier.Builder.class)
 public class NationalProviderIdentifier {
   private final long id;
-  private final long operatorId;
+  private final long idNumber;
   private final String regionCode;
   
   @JsonCreator
@@ -23,7 +23,7 @@ public class NationalProviderIdentifier {
 
   private NationalProviderIdentifier(@Nonnull Builder builder) {
     this.id = builder.id;
-    this.operatorId = builder.operatorId;
+    this.idNumber = builder.idNumber;
     this.regionCode = builder.regionCode;
   }
   
@@ -31,8 +31,8 @@ public class NationalProviderIdentifier {
     return id;
   }
   
-  public long getOperatorId() {
-    return operatorId;
+  public long getIdNumber() {
+    return idNumber;
   }
 
   @Nonnull
@@ -45,7 +45,7 @@ public class NationalProviderIdentifier {
     final int prime = 31;
     int result = 1;
     result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + (int) (operatorId ^ (operatorId >>> 32));
+    result = prime * result + (int) (idNumber ^ (idNumber >>> 32));
     result = prime * result + ((regionCode == null) ? 0 : regionCode.hashCode());
     return result;
   }
@@ -61,7 +61,7 @@ public class NationalProviderIdentifier {
     NationalProviderIdentifier other = (NationalProviderIdentifier) obj;
     if (id != other.id)
       return false;
-    if (operatorId != other.operatorId)
+    if (idNumber != other.idNumber)
       return false;
     if (regionCode == null) {
       if (other.regionCode != null)
@@ -70,17 +70,17 @@ public class NationalProviderIdentifier {
       return false;
     return true;
   }
-  
+
   @Override
   public String toString() {
-    return "NationalProviderIdentifier [id=" + id + ", operatorId=" + operatorId + ", regionCode="
+    return "NationalProviderIdentifier [id=" + id + ", idNumber=" + idNumber + ", regionCode="
         + regionCode + "]";
   }
 
   @JsonPOJOBuilder
   public static class Builder {
     private Long id;
-    private Long operatorId;
+    private Long idNumber;
     private String regionCode;
     
     private Builder() {}
@@ -91,9 +91,9 @@ public class NationalProviderIdentifier {
       return this;
     }
 
-    public Builder withOperatorId(long operatorId) {
-      checkArgument(operatorId >= 0, "operatorId must be a non-negative number"); 
-      this.operatorId = operatorId;
+    public Builder withIdNumber(long idNumber) {
+      checkArgument(idNumber >= 0, "idNumber must be a non-negative number"); 
+      this.idNumber = idNumber;
       return this;
     }
 
@@ -105,7 +105,7 @@ public class NationalProviderIdentifier {
     
     public NationalProviderIdentifier build () {
       requireNonNull(id, "id cannot be null");
-      requireNonNull(operatorId, "operatorId cannot be null");
+      requireNonNull(idNumber, "idNumber cannot be null");
       requireNonNull(regionCode, "password cannot be null");
       return new NationalProviderIdentifier(this);      
     }
