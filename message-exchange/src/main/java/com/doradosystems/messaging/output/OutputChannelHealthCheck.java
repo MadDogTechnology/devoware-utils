@@ -7,8 +7,6 @@ import java.io.IOException;
 import javax.annotation.Nonnull;
 
 import com.codahale.metrics.health.HealthCheck;
-import com.doradosystems.mis.agent.model.messaging.MessageHeaders;
-import com.doradosystems.mis.agent.model.messaging.MessageType;
 import com.google.common.collect.ImmutableMap;
 
 public class OutputChannelHealthCheck extends HealthCheck implements OutputChannelHealthCheckMBean {
@@ -30,7 +28,7 @@ public class OutputChannelHealthCheck extends HealthCheck implements OutputChann
   @Override
   protected Result check() throws Exception {
     try {
-      channel.write("healthcheck", ImmutableMap.of(MessageHeaders.MESSAGE_TYPE_NAME, MessageType.HEALTH_CHECK));
+      channel.write("healthcheck", ImmutableMap.of("message-type", "health-check"));
       return HealthCheck.Result.healthy();
     } catch (IOException io) {
       return HealthCheck.Result.unhealthy(io);
