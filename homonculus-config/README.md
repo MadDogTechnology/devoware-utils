@@ -1,11 +1,11 @@
-# yaml-configuration
-The **yaml-configuration** library encapsulates logic used to automatically bind a YAML configuration file to a corresponding
+# homonculus-config
+The **homonculus-config** library encapsulates logic used to automatically bind a YAML configuration file to a corresponding
 [Jackson](https://github.com/FasterXML/jackson) annotated configuation class of your own design.  The library also includes functionality
 to allow for configuration classes with validation annotations to be validated in accordance with the 
 [JSR 303 - Bean Validation](http://beanvalidation.org/1.0/spec/) specification.  This library is a variation of the [DropWizard](http://www.dropwizard.io/1.0.0/docs/)
-configuration library adapted for standalone Java service applications which do not include a Jersey/Jetty container (see [homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus)).
+configuration library adapted for standalone Java service applications which do not include a Jersey/Jetty container (see [homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-core)).
 
-## Using the yaml-configuration library
+## Using the homonculus-config library
 
 ### YAML configuration file
 
@@ -21,7 +21,7 @@ port: 8080
 ```
 ### Configuration class
 
-You use the **yaml-configuration**
+You use the **homonculus-config**
 library in order to automatically transform your YAML configuration file into an instance of a Java class that you have created.  
 If the configuration class includes any validation constraints defined as
 annotations, you can validate the configuration object against these constraints, reporting any violations
@@ -56,7 +56,7 @@ public class SimpleApplicationConfiguration {
   
 }
 ```
-When the yaml-configuration APIs are used, an instance of the ```SimpleApplication``` class will be created, and each of its properties that
+When the homonculus-config APIs are used, an instance of the ```SimpleApplication``` class will be created, and each of its properties that
 is annotated with the ```JsonProperty``` annotation will be populated with the correspondingly named value from the ```simple-app.yml```
 file. An exception will be thrown if the ```simple-app.yml``` file is missing a ```hostName``` property since the ```hostName``` field
 within the configuration class is annotated with the ```NotNull``` annotation.  An exception will also be thrown if the value of the
@@ -106,7 +106,7 @@ public class SimpleApplication {
 }
 ```
 ### Build dependencies
-An application which uses the **yaml-configuration** library must include the following additional dependencies:
+An application which uses the **homonculus-config** library must include the following additional dependencies:
 
 ```groovy
 dependencies {

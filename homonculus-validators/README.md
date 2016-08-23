@@ -1,5 +1,5 @@
-# validators
-The **validators** library includes a collection of custom validation annotations together with their corresponding validation classes as
+# homonculus-validators
+The **homonculus-validators** library includes a collection of custom validation annotations together with their corresponding validation classes as
 defined by [JSR 303 - Bean Validation](http://beanvalidation.org/1.0/spec/). The following validation annotations are included:
 
 ## List of validation annotations
@@ -66,10 +66,10 @@ which is greater than or equal to 1 minute as follows:
   private int port;
 ```
 ## Build dependencies
-A **homonculus** application which uses the **validators** library must include the following additional dependencies:
+A **homonculus** application which uses the **homonculus-validators** library must include the following additional dependencies:
 ```groovy
 dependencies {
     compile 'commons-beanutils:commons-beanutils-core:1.8.3',
-            'org.devoware:validators:1.0'
+            'org.devoware:homonculus-validators:1.0'
 }
 ```

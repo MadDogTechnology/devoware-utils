@@ -1,13 +1,13 @@
-# message-exchange
+# homonculus-messaging
 
-The **message-exchange** library encapsulates functionality needed to:
+The **homonculus-messaging** library encapsulates functionality needed to:
 
 * read data from a RabbitMQ input channel using a higher level InputChannel interface.
 
 * write data to a RabbitMQ output channel using a higher level OutputChannel interface.  
 
-The **message-exchange** library is intended to be used in conjunction with a
-**[homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus)** application, and it includes Dagger 2 modules
+The **homonculus-messaging** library is intended to be used in conjunction with a
+**[homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-core)** application, and it includes Dagger 2 modules
 which allows for the creation of singleton InputChannel and OutputChannel objects that can be easily injected into other objects.
 
 #Configuration class
@@ -169,13 +169,13 @@ public class OutputChannelHealthCheck extends HealthCheck implements OutputChann
 }
 ```
 ## Build dependencies
-A **homonculus** application which uses the **message-exchange** library must include the following additional dependencies:
+A **homonculus** application which uses the **homonculus-messaging** library must include the following additional dependencies:
 
 ```groovy
 dependencies {
     compile  'com.google.dagger:dagger:2.6',
              'com.rabbitmq:amqp-client:3.6.5',
-             'org.devoware:message-exchange:1.0'
+             'org.devoware:homonculus-messaging:1.0'
             
     compileOnly 'com.google.dagger:dagger-compiler:2.6'         
 }

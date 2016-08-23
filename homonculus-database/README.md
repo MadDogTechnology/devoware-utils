@@ -1,8 +1,8 @@
-# database-config
+# homonculus-database
 
-The **database-config** library encapsulates functionality needed to automatically create a data source that manages a pool of connections
-to a relational database from a YAML configuration file.  The **database-config** library is intended to be used in conjunction with a
-**[homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus)** application, and it includes a Dagger 2 module
+The **homonculus-database** library encapsulates functionality needed to automatically create a data source that manages a pool of connections
+to a relational database from a YAML configuration file.  The **homonculus-database** library is intended to be used in conjunction with a
+**[homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-core)** application, and it includes a Dagger 2 module
 which allows for the creation of a singleton ManagedPooledDataSource object that can be easily injected into other objects that require
 access to a data source.
 
@@ -101,13 +101,13 @@ database:
   minIdleTime: 1 minute
 ```
 ## Build dependencies
-A **homonculus** application which uses the **database-config** library must include the following additional dependencies:
+A **homonculus** application which uses the **homonculus-database** library must include the following additional dependencies:
 ```groovy
 dependencies {
     compile 'com.google.dagger:dagger:2.6',
             'org.apache.tomcat:tomcat-jdbc:8.5.4',
             'postgresql:postgresql:9.1-901-1.jdbc4', // Replace with whatever JDBC driver you want to use
-            'org.devoware:database-config:1.0'
+            'org.devoware:homonculus-database:1.0'
     
     compileOnly 'com.google.dagger:dagger-compiler:2.6'        
 }
