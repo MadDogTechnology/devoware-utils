@@ -184,7 +184,7 @@ repositories {
 }
 
 dependencies {
-    runtime     'org.devoware:bootstrap:1.0'
+    runtime     'org.devoware:homonculus-bootstrap:1.0'
 
     compile     'org.slf4j:log4j-over-slf4j:1.7.21',
                 'org.slf4j:jcl-over-slf4j:1.7.21',
@@ -280,7 +280,7 @@ eclipse.classpath.file {
 			<stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;sourceLookupDirector&gt;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#10;${sourcePathsXml}&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#10;&amp;lt;javaProject name=&amp;quot;${project.name}&amp;quot;/&amp;gt;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.javaProject&quot;/&gt;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#10;&amp;lt;default/&amp;gt;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#10;&lt;/sourceContainers&gt;&#10;&lt;/sourceLookupDirector&gt;&#10;"/>
 			<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
 			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/&quot; javaProject=&quot;${project.name}&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#10;"/>
-			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry internalArchive=&quot;/${project.name}/lib/bootstrap-1.0.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
+			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry internalArchive=&quot;/${project.name}/lib/homonculus-bootstrap-1.0.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
 			</listAttribute>
 			<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 			<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.devoware.bootstrap.Bootstrap"/>
@@ -308,7 +308,7 @@ eclipse.classpath.file {
 			<stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;sourceLookupDirector&gt;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#10;${sourcePathsXml}&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#10;&amp;lt;javaProject name=&amp;quot;${project.name}&amp;quot;/&amp;gt;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.javaProject&quot;/&gt;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#10;&amp;lt;default/&amp;gt;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#10;&lt;/sourceContainers&gt;&#10;&lt;/sourceLookupDirector&gt;&#10;"/>
 			<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
 			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/&quot; javaProject=&quot;${project.name}&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#10;"/>
-			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry internalArchive=&quot;/${project.name}/lib/bootstrap-1.0.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
+			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry internalArchive=&quot;/${project.name}/lib/homonculus-bootstrap-1.0.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
 			</listAttribute>
 			<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 			<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.devoware.bootstrap.Bootstrap"/>
