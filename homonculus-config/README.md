@@ -32,7 +32,7 @@ package com.doradosystems.simpleapp.config;
 
 import javax.validation.constraints.NotNull;
 
-import org.devoware.validators.validation.PortRange;
+import org.devoware.homonculus.validators.validation.PortRange;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -74,12 +74,12 @@ import java.io.IOException;
 
 import javax.validation.Validator;
 
-import org.devoware.configuration.ConfigurationException;
-import org.devoware.configuration.ConfigurationFactory;
-import org.devoware.configuration.ConfigurationSourceProvider;
-import org.devoware.configuration.FileConfigurationSourceProvider;
-import org.devoware.configuration.YamlConfigurationFactory;
-import org.devoware.configuration.validation.Validators;
+import org.devoware.homonculus.config.ConfigurationException;
+import org.devoware.homonculus.config.ConfigurationFactory;
+import org.devoware.homonculus.config.ConfigurationSourceProvider;
+import org.devoware.homonculus.config.FileConfigurationSourceProvider;
+import org.devoware.homonculus.config.YamlConfigurationFactory;
+import org.devoware.homonculus.config.validation.Validators;
 
 import com.doradosystems.simpleapp.config.SimpleApplicationConfiguration;
 
