@@ -59,7 +59,7 @@ package com.doradosystems.simpleapp.config;
 
 import javax.validation.constraints.NotNull;
 
-import org.devoware.validators.validation.PortRange;
+import org.devoware.homonculus.validators.validation.PortRange;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -100,10 +100,10 @@ package com.doradosystems.simpleapp;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import org.devoware.homonculus.Application;
-import org.devoware.homonculus.lifecycle.Managed;
-import org.devoware.homonculus.setup.Environment;
-import org.devoware.validators.util.Duration;
+import org.devoware.homonculus.core.Application;
+import org.devoware.homonculus.core.lifecycle.Managed;
+import org.devoware.homonculus.core.setup.Environment;
+import org.devoware.homonculus.validators.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -283,7 +283,7 @@ eclipse.classpath.file {
 			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry internalArchive=&quot;/${project.name}/lib/homonculus-bootstrap-1.0.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
 			</listAttribute>
 			<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
-			<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.devoware.bootstrap.Bootstrap"/>
+			<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.devoware.homonculus.bootstrap.Bootstrap"/>
 			<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="start ${project.name}.yml"/>
 			<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="${project.name}"/>
 			<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dbootstrap.class=${appClass} -Duser.timezone=GMT -Dlog.dir=../logs -Dlog.extra.appender=FILE"/>
@@ -311,7 +311,7 @@ eclipse.classpath.file {
 			<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry internalArchive=&quot;/${project.name}/lib/homonculus-bootstrap-1.0.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
 			</listAttribute>
 			<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
-			<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.devoware.bootstrap.Bootstrap"/>
+			<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.devoware.homonculus.bootstrap.Bootstrap"/>
 			<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="stop"/>
 			<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="${project.name}"/>
 			<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dbootstrap.class=${appClass} -Duser.timezone=GMT -Dlog.dir=../logs -Dlog.extra.appender=FILE"/>
