@@ -7,7 +7,7 @@ The **homonculus-messaging** library encapsulates functionality needed to:
 * write data to a RabbitMQ output channel using a higher level OutputChannel interface.  
 
 The **homonculus-messaging** library is intended to be used in conjunction with a
-**[homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-core)** application, and it includes Dagger 2 modules
+**[homonculus](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-core)** application, and it includes Dagger 2 modules
 which allows for the creation of singleton InputChannel and OutputChannel objects that can be easily injected into other objects.
 
 #Configuration class

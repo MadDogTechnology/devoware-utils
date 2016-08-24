@@ -1,6 +1,6 @@
 # homonculus-core
 The **homonculus-core** library builds on the foundation established by the 
-**[homonculus-bootstrap](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-bootstrap)** library, providing a generalized framework for building java stand-alone services and microservices.  All applications built with the **homonculus** framework include the following features.
+**[homonculus-bootstrap](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-bootstrap)** library, providing a generalized framework for building java stand-alone services and microservices.  All applications built with the **homonculus** framework include the following features.
 
 * When the application is initialized, it creates a socket server that listens for a termination sequence.  When the application is stopped,
 it creates a client socket which transmits the termination sequence, thereby triggering a graceful shutdown.  In this way, **homonculus**
@@ -31,7 +31,7 @@ it encounters and aborting the application if any violations are found (see **[H
 
 ## Creating a homonculus application
 Since the **homonculus** framework builds on the **bootstrap** library, all standards for building **bootstrap** applications will need to 
-be observed (see **[homonculus-bootstrap](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-bootstrap)**). The following additional
+be observed (see **[homonculus-bootstrap](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-bootstrap)**). The following additional
 standards will also need to be observed.
 
 ###YAML configuration file
@@ -47,11 +47,11 @@ hostName: localhost
 port: 8080
 ```
 ##Configuration class
-The **homonculus** framework uses the [homonculus-config](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-config)
+The **homonculus** framework uses the [homonculus-config](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-config)
 library in order to automatically transform your YAML configuration file into an instance of a Java class that you have created.  If the configuration class includes any validation constraints defined as
 annotations, the framework will automatically attempt to validate the configuration object against these constraints, reporting any violations
 it encounters and aborting the application if any violations are found (see **[Hibernate Validator](http://hibernate.org/validator/)**). 
-Additional annotations and validators are provided in the **[homonculus-validators](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-validators)** library.
+Additional annotations and validators are provided in the **[homonculus-validators](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-validators)** library.
 Continuing with the example defined above, let's define a configuration class to go with our ```simple-app.yml``` configuration file:
 
 ```java

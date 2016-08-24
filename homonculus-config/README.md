@@ -3,7 +3,7 @@ The **homonculus-config** library encapsulates logic used to automatically bind 
 [Jackson](https://github.com/FasterXML/jackson) annotated configuation class of your own design.  The library also includes functionality
 to allow for configuration classes with validation annotations to be validated in accordance with the 
 [JSR 303 - Bean Validation](http://beanvalidation.org/1.0/spec/) specification.  This library is a variation of the [DropWizard](http://www.dropwizard.io/1.0.0/docs/)
-configuration library adapted for standalone Java service applications which do not include a Jersey/Jetty container (see [homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-core)).
+configuration library adapted for standalone Java service applications which do not include a Jersey/Jetty container (see [homonculus](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-core)).
 
 ## Using the homonculus-config library
 

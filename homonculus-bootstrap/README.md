@@ -76,4 +76,3 @@ $JAVA_HOME/java -cp ../lib/homonculus-bootstrap-1.0.jar -Dbootstrap.class=com.do
 ```
 
 
-
