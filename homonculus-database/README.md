@@ -15,8 +15,8 @@ package com.doradosystems.simpleapp.config;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import org.devoware.config.db.DataSourceFactory;
-import org.devoware.validators.validation.PortRange;
+import org.devoware.homonculus.database.DataSourceFactory;
+import org.devoware.homonculus.validators.validation.PortRange;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
