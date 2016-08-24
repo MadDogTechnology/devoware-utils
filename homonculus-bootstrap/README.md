@@ -75,4 +75,3 @@ To stop the application described above,navigate to the **bin** directory and ex
 $JAVA_HOME/java -cp ../lib/homonculus-bootstrap-1.0.jar -Dbootstrap.class=com.doradosystems.mis.scheduler.MisSchedulerApplication org.devoware.bootstrap.Bootstrap stop
 ```
 
-
