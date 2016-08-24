@@ -20,8 +20,8 @@ package com.doradosystems.simpleapp.config;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.doradosystem.messaging.config.RabbitMqConfiguration;
-import org.devoware.validators.validation.PortRange;
+import org.devoware.homonculus.messaging.config.RabbitMqConfiguration;
+import org.devoware.homonculus.validators.validation.PortRange;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -104,12 +104,12 @@ Dagger 2 as shown below:
 ```java
 package com.doradosystems.simpleapp.messaging;
 
-import static com.doradosystem.messaging.MessageExchangeQualifiers.INPUT_EVENT_BUS;
+import static org.devoware.homonculus.messaging.MessageExchangeQualifiers.INPUT_EVENT_BUS;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.doradosystems.messaging.input.Message;
+import org.devoware.homonculus.messaging.input.Message;
 import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 
@@ -132,7 +132,7 @@ public class MessageProcessor {
 
 The output channel can be injected into any application class that must publish messages to RabbitMQ.  It exposes a simple ```write(String message)```
 and a ```write(String message, Map<String,Object> headers)``` method.  Note that only strings and primitive wrapper classes should be
-used as header values. Here what a class that writes to the RabbitMq output channel might look like:
+used as header values. Here is what a class that writes to the RabbitMq output channel might look like:
 
 ```java
 package com.doradosystems.messaging.output;
@@ -144,8 +144,6 @@ import java.io.IOException;
 import javax.annotation.Nonnull;
 
 import com.codahale.metrics.health.HealthCheck;
-import com.doradosystems.mis.agent.model.messaging.MessageHeaders;
-import com.doradosystems.mis.agent.model.messaging.MessageType;
 import com.google.common.collect.ImmutableMap;
 
 public class OutputChannelHealthCheck extends HealthCheck implements OutputChannelHealthCheckMBean {
