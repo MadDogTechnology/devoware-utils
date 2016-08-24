@@ -2,7 +2,7 @@
 
 The **homonculus-database** library encapsulates functionality needed to automatically create a data source that manages a pool of connections
 to a relational database from a YAML configuration file.  The **homonculus-database** library is intended to be used in conjunction with a
-**[homonculus](https://github.com/doradosystemsadmin/mis-common/tree/master/homonculus-core)** application, and it includes a Dagger 2 module
+**[homonculus](https://github.com/cpdevoto/devoware-utils/tree/master/homonculus-core)** application, and it includes a Dagger 2 module
 which allows for the creation of a singleton ManagedPooledDataSource object that can be easily injected into other objects that require
 access to a data source.
 
