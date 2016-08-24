@@ -1,3 +1,3 @@
-include 'homonculus-bootstrap', 'homonculus-config', 'homonculus-core', 'homonculus-validators', 'homonculus-database', 'homonculus-messaging'
+include 'homonculus-bootstrap', 'homonculus-config', 'homonculus-core', 'homonculus-validators', 'homonculus-database', 'homonculus-messaging', 'simple-homonculus-app'
 
 rootProject.name = 'mis-common'
