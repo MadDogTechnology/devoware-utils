@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+group = 'org.devoware'
+version = '1.0'
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file:///Users/cdevoto/GitHub/maven-repository/")
+    }
+}

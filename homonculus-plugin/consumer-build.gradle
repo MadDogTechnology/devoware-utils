@@ -1,0 +1,12 @@
+// Command -> gradle -b consumer-build.gradle cleanEclipse eclipse --refresh-dependencies
+
+buildscript {
+    repositories {
+        maven { url 'https://github.com/cpdevoto/maven-repository/raw/master/' }
+    }
+    dependencies {
+        classpath group: 'org.devoware', name: 'homonculus-plugin',
+				  version: '1.0'
+    }
+}
+apply plugin: 'org.devoware.homonculus'
