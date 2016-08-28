@@ -1,0 +1,64 @@
+buildscript {
+  repositories {
+      mavenCentral()
+  }
+  dependencies {
+      classpath 'org.liquibase:liquibase-gradle-plugin:1.2.1',
+                'postgresql:postgresql:9.1-901-1.jdbc4'
+  }
+}
+
+plugins {
+  id 'org.liquibase.gradle' version '1.2.1'
+}
+
+apply plugin: 'maven'
+
+group = 'org.devoware'
+version = 1.0
+
+liquibase {
+  activities {
+    main {
+      changeLogFile 'migrations.xml'
+      url "${local_db_url}"
+      username "${local_db_username}"
+      password "${local_db_password}"
+    }
+  }
+}
+
+project.task('build') {
+  doLast {
+    def File dist = mkdir("${project.buildDir}/dist")
+    def File tmp = mkdir("${project.buildDir}/tmp/dist/${project.name}-${project.version}")
+    copy {
+      from 'migrations.xml'
+      into tmp
+    }
+    copy {
+      from 'migrations'
+      into project.file("${tmp}/migrations")
+    }
+  }
+}
+
+project.task('archive', type: Tar, dependsOn: project.build) {
+  def File dist = mkdir("${project.buildDir}/dist")
+  def File tmp = mkdir("${project.buildDir}/tmp/dist/${project.name}-${project.version}")
+  baseName = "${project.name}"
+  destinationDir = dist
+  from tmp
+  compression = Compression.GZIP
+}
+
+artifacts {
+  archives archive
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file:///Users/cdevoto/GitHub/maven-repository/")
+    }
+}
