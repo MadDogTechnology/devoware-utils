@@ -192,30 +192,30 @@ class HomonculusPlugin implements Plugin<Project> {
 
     project.task('createPackage', dependsOn: project.build) {
       doLast {
-        File dist = mkdir("${project.buildDir}/dist")
-        File tmp = mkdir("${project.buildDir}/tmp/dist/${project.name}-${project.version}")
-        tasks.withType(Jar).each { archiveTask ->
-          copy {
+        File dist = project.mkdir("${project.buildDir}/dist")
+        File tmp = project.mkdir("${project.buildDir}/tmp/dist/${project.name}-${project.version}")
+        project.tasks.withType(Jar).each { archiveTask ->
+          project.copy {
             from archiveTask.archivePath
             into project.file("${tmp}/lib")
           }
         }
-        copy {
-          from configurations.compile, configurations.runtime
+        project.copy {
+          from project.configurations.compile, project.configurations.runtime
           into project.file("${tmp}/lib")
         }
-        copy {
+        project.copy {
           from 'bin'
-          into file("${tmp}/bin")
+          into project.file("${tmp}/bin")
           exclude { details ->
             details.file.name.endsWith('.launch')
           }
         }
-        copy {
+        project.copy {
           from 'config'
           into project.file("${tmp}/config")
         }
-        mkdir("${tmp}/logs")
+        project.mkdir("${tmp}/logs")
       }
     }
 
