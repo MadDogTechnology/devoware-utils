@@ -1,0 +1,34 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'org.liquibase:liquibase-core:3.4.2',
+            'postgresql:postgresql:9.1-901-1.jdbc4'
+    testCompile 'junit:junit:4.12'
+}
+
+repositories {
+    maven {
+        url "http://artifacts.doradosystems.com:8081/content/groups/public"
+    }
+}
+
+group = 'com.doradosystems.mis.common'
+version = '1.0.1'
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: 'http://artifacts.doradosystems.com:8081/content/repositories/releases') {
+                authentication(userName: "deployment", password: "deployment123");
+            }
+            snapshotRepository(url: 'http://artifacts.doradosystems.com:8081/content/repositories/snapshots') {
+                authentication(userName: "deployment", password: "deployment123");
+            }
+        }
+    }
+}

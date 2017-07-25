@@ -1,0 +1,37 @@
+  # the name of your JDBC driver
+  driverClass: org.postgresql.Driver
+
+  # the username
+  user: super
+
+  # the password
+  password: 9AwBBs3tPJ3vq4vq
+
+  # the JDBC URL
+  url: jdbc:postgresql://localhost:5438/test_database
+
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  initialSize: 1
+
+  # the minimum number of connections to keep open
+  minSize: 1
+
+  # the maximum number of connections to keep open
+  maxSize: 1
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+
+  # Whether or not connections will be validated before being borrowed from the pool.
+  # If the connection fails to validate, it will be dropped from the pool, and another will be borrowed.
+  checkConnectionOnBorrow: true
