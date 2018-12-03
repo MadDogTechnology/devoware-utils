@@ -1,4 +1,6 @@
 # devoware-utils
+**Owner(s):** Carlos Devoto
+
 A collection of utility libraries, including the **homonculus** framework for building Java stand-alone services.
 ## homonculus libraries
 The following libraries are defined within the devoware-utils project:
